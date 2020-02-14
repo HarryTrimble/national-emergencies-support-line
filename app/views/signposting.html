@@ -1,0 +1,265 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  NESL Operating Manual
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Signposting to other services</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+  
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Signposting to other services</h1>
+      <div class="govuk-form-group">
+        <input class="govuk-input" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for services, organisations, categories" title="Type in a name">
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-row">
+    <!--
+    <div class="govuk-grid-column-one-quarter" id="hide-on-mobile">
+
+      <ul class="govuk-list">
+        <li>
+          <a class="govuk-link" href="#">Red Cross Signposting</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#other-support-lines">Other support lines</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Health - age related</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Mental health</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Bereavement</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Safeguarding</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Government agencies</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Financial assistance</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Missing Persons and Tracing Services</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Homelessness</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Refugee Services</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Short Term Needs</a>
+        </li>
+        <li>
+          <a class="govuk-link" href="#">Practical Support</a>
+        </li>
+      </ul>
+    </div>
+    -->
+    <div class="govuk-grid-column-full">
+
+      <table id="myTable" class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-one-quarter">Service</th>
+            <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-one-quarter">What it does</th>
+            <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-one-quarter">Contact</th>
+            <th scope="col" class="govuk-table__header app-custom-class govuk-!-width-one-quarter">Region</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td colspan="4" scope="row" class="govuk-table__header" style="font-size: 24px;"><br>Other supprt lines
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">Cruse Bereavement Care
+              <span class="tags">bereavement, support line</span>
+            </td>
+            <td class="govuk-table__cell">bereavement support</td>
+            <td class="govuk-table__cell"><nobr>0844 477 9400</nobr><br>
+            <a href="http://www.cruse.org.uk/home">Website</a><br>
+            info@cruse.org.uk
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>NHS 111</nobr>
+              <span class="tags">health, support line</span>
+            </td>
+            <td class="govuk-table__cell">Non-emergency NHS helpline offering access to local services both in and out of hours</td>
+            <td class="govuk-table__cell"><nobr>111</nobr><br>
+            <a href="https://www.nhs.uk/using-the-nhs/nhs-services/urgent-and-emergency-care/nhs-111/">Website</a>
+            </td>
+            <td class="govuk-table__cell">England, Scotland and Wales</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>The Silver Line</nobr>
+              <span class="tags">support line</span>
+            </td>
+            <td class="govuk-table__cell">Free 24 hour confidential helpline for people over 50</td>
+            <td class="govuk-table__cell"><nobr>0800 470 8090</nobr><br>
+            <a href="http://www.thesilverline.org.uk/">Website</a>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>Samaritans</nobr>
+              <span class="tags">support line, suicide</span>
+            </td>
+            <td class="govuk-table__cell">24 hour helpline for those in crisis. UK Wide</td>
+            <td class="govuk-table__cell"><nobr>116 12</nobr><br>
+            <a href="http://www.samaritans.org/">Website</a>
+            </td>
+            <td class="govuk-table__cell">UK and Ireland</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>Family Lives (formerly ParentLine)</nobr>
+              <span class="tags">support line, children</span>
+            </td>
+            <td class="govuk-table__cell">Helpline for any aspects of family life and parenting, including bullying. UK wide </td>
+            <td class="govuk-table__cell"><nobr>0808 800 2222</nobr><br>
+            <a href="http://www.familylives.org.uk/">Website</a>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>Chilren 1st</nobr>
+              <span class="tags">support line, children</span>
+            </td>
+            <td class="govuk-table__cell">Welfare of children in Scotland, with a free confidential 24 hour advice line</td>
+            <td class="govuk-table__cell"><nobr>0800 028 2233</nobr><br>
+            <a href="http://www.children1st.org.uk/">Website</a>
+            </td>
+            <td class="govuk-table__cell">Scotland</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>NSPCC</nobr>
+              <span class="tags">support line, children, safeguarding</span>
+            </td>
+            <td class="govuk-table__cell">Charity seeking to stop cruelty to children. </td>
+            <td class="govuk-table__cell">
+              <nobr>0808 800 5000</nobr><br>
+              <a href="https://www.nspcc.org.uk/">Website</a><br>
+              help@nspcc.org.uk
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>ChildLine</nobr>
+              <span class="tags">support line, children, safeguarding</span>
+            </td>
+            <td class="govuk-table__cell">Free 24 hour confidential helpline for children suffering from abuse and neglect, as well as other problems.</td>
+            <td class="govuk-table__cell">
+              <nobr>0800 1111</nobr><br>
+              <a href="http://www.childline.org.uk/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>YoungMinds</nobr>
+              <span class="tags">support line, children</span>
+            </td>
+            <td class="govuk-table__cell">Improving the emotional well-being and mental health of children and young people, providing knowledge to professionals, parents and young people through a variety of services.</td>
+            <td class="govuk-table__cell">
+              <nobr>0808 802 5544</nobr><br>(9.30am to 4pm Monday to Friday)<br>
+              <a href="http://www.youngminds.org.uk/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header"><nobr>Winston’s Wish</nobr>
+              <span class="tags">support line, children</span>
+            </td>
+            <td class="govuk-table__cell">Support line for bereaved children and their families</td>
+            <td class="govuk-table__cell">
+              <nobr>0845 203 0405</nobr><br>(calls cost 2p per minute)<br>
+              <a href="http://www.winstonswish.org.uk/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">The Compassionate Friends
+              <span class="tags">support line, children, bereavement</span>
+            </td>
+            <td class="govuk-table__cell">Support line for families who have suffered the death of a child</td>
+            <td class="govuk-table__cell">
+              <nobr>0845 123 2304</nobr><br>
+              Northern Ireland: <nobr>0288 778 8016</nobr><br>
+              <a href="http://www.tcf.org.uk/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">The National Association of Widows
+              <span class="tags">support line, bereavement</span>
+            </td>
+            <td class="govuk-table__cell">Support line for men and women who have lost their partners.</td>
+            <td class="govuk-table__cell">
+              <nobr>0845 838 2261</nobr><br>
+              <a href="http://www.nawidows.org.uk">Website</a><br>
+              info@nawidows.org.uk
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">
+              Road Peace
+              <span class="tags">support line, bereavement</span>
+            </td>
+            <td class="govuk-table__cell">Support line for people who have been injured and/or bereaved from a crash</td>
+            <td class="govuk-table__cell">
+              <nobr>0845 450 0355</nobr><br>
+              <a href="http://www.roadpeace.org/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">
+              Forces Line 
+              <span class="tags">support line</span>
+            </td>
+            <td class="govuk-table__cell">Support line for active and veteran soldiers, airmen, sailors, and their families</td>
+            <td class="govuk-table__cell">
+              <nobr>0800 731 4880</nobr><br>
+              <a href="https://www.ssafa.org.uk/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td scope="row" class="govuk-table__header">
+              Rape Crisis 
+              <span class="tags">support line, sexual assault</span>
+            </td>
+            <td class="govuk-table__cell">Support line offering confidential information about local services and support for people affected by rape and sexual assault.</td>
+            <td class="govuk-table__cell">
+              <nobr>0800 731 4880</nobr><br>
+              <a href="https://www.ssafa.org.uk/">Website</a><br>
+            </td>
+            <td class="govuk-table__cell">UK wide</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+</div>
+
+{% endblock %}
