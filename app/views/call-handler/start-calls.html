@@ -1,0 +1,70 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  NESL Operating Manual
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="/call-handler">Call handler</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">How to starts calls</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">How to start calls</h1>
+
+      <p class="govuk-body">Use this this template to start calls to the support line.</p>
+
+      <div class="govuk-panel govuk-panel--confirmation copy-box">
+        <div class="govuk-panel__body CopyThisText">
+          Hello, you’re speaking to <nobr>[your-name]</nobr> from <nobr>[your-organisation]</nobr> on behalf of the National Emergencies Support Line. 
+          <br><br>
+          Before we start I need to check you understand how we will use your information. 
+          <br><br>
+          Our service is confidential and we will only share information about you without your consent if we’re worried about your safety or someone else’s safety, or if we are required to by law. 
+          <br><br>
+          Is that okay? 
+        </div>
+      </div>
+      
+      {% include "includes/copy-button.html" %}
+
+      <p style="margin-top: 10px;"><a href="/public/images/call-checklist.pdf" download>Download template</a></p>
+
+      {% include "includes/related-templates.html" %}
+
+      <ul class="govuk-list">
+        <li id="homepage-link-list">
+          {% include "nav-links/call-handler/principles.html" %}
+        </li>
+        <li id="homepage-link-list">
+          {% include "nav-links/signposting.html" %}
+        </li>
+        <li id="homepage-link-list">
+          {% include "nav-links/call-handler/finish-calls.html" %}
+        </li>
+        <li id="homepage-link-list">
+          {% include "nav-links/call-handler/after-call.html" %}
+        </li> 
+      </ul>
+
+    </div>
+
+
+  </div>
+
+{% endblock %}
